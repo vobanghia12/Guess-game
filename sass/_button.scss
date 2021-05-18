@@ -1,0 +1,21 @@
+//inheritance
+%btn {
+  display: inline-block;
+  font-size: 2rem;
+  @include set-background($light-color);
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(201, 199, 193);
+  }
+}
+
+.btn-again {
+  @extend %btn;
+  position: absolute;
+  top: 2rem;
+}
+.btn-check {
+  @extend %btn;
+  width: 50rem;
+}

@@ -1,0 +1,20 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  color: rgb(223, 217, 217);
+  background-color: rgb(34, 34, 34);
+  height: 100vh;
+  width: 100vw;
+}
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: rgb(223, 217, 217);
+}

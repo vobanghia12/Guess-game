@@ -1,0 +1,30 @@
+$light-color: rgb(223, 217, 217);
+$bg-color: rgb(34, 34, 34);
+$font-stack: "Press Start 2P", sans-serif;
+
+@function set-text-color($color) {
+  @if (lightness($color) > 70) {
+    @return rgb(34, 34, 34);
+  } @else {
+    @return rgb(223, 217, 217);
+  }
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+@mixin set-position(
+  $position,
+  $top: null,
+  $right: null,
+  $left: null,
+  $bottom: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  left: $left;
+  bottom: $bottom;
+}

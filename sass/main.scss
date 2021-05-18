@@ -1,0 +1,74 @@
+@import "config";
+@import "button";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  font-family: $font-stack;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  @include set-background($bg-color);
+  height: 100vh;
+  width: 100vw;
+  header {
+    @include set-position(relative);
+    height: 35vh;
+    border-bottom: 0.5rem solid $light-color;
+    h1 {
+      @include set-position(absolute, $top: 40%);
+      font-size: 4rem;
+      word-spacing: 1rem;
+      text-align: center;
+      font-weight: 400;
+      line-height: 1.5;
+      width: 100%;
+    }
+    p {
+      @include set-position(absolute, $top: 4rem, $right: 2rem);
+      font-size: 1.5rem;
+    }
+    .secret-number {
+      @include set-background($light-color);
+      @include set-position(absolute, $bottom: 0, $left: 50%);
+      font-size: 5rem;
+      text-align: center;
+      margin: auto;
+      padding: 3rem;
+      transform: translate(-8rem, 5rem);
+    }
+  }
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 65vh;
+    font-size: 2rem;
+    .left {
+      width: 52rem;
+      .input-data {
+        @include set-background($bg-color);
+        border: 4px solid $light-color;
+        display: block;
+        width: 25rem;
+        padding: 4rem 0;
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+    }
+    .right {
+      width: 52rem;
+      .message {
+        margin-top: -1rem;
+        margin-bottom: 8rem;
+      }
+      p {
+        line-height: 5rem;
+      }
+    }
+  }
+}
